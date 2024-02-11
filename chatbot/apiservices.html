@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .placeholder-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        .placeholder {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            width: 600px;
+            cursor: pointer;
+        }
+        .placeholder:hover{
+            box-shadow: inset -4px -4px rgba(97,97,97);
+            transform: scale(1.01);
+        }
+    </style>
+    <script>
+        function copyTextToClipboard(text) {
+            const dummy = document.createElement('textarea');
+            dummy.value = text;
+            document.body.appendChild(dummy);
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            alert('Text copied to clipboard: ' + text);
+        }
+    </script>
+</head>
+<body>
+    <h1>API Services</h1>
+    <div class="placeholder-group">
+        <div class="placeholder" onclick="copyTextToClipboard('https://api.example.com/your-css-link.css')">CSS Link for GPS</div>
+        <div class="placeholder" onclick="copyTextToClipboard('<script src=\'https://cdn.example.com/your-script.js\'></script>')">JS Script FOR gps</div>
+    </div>
+    <div class="placeholder-group">
+        <div class="placeholder" onclick="copyTextToClipboard('https://api.example.com/your-css-link.css')">CSS Link for chatbot</div>
+        <div class="placeholder" onclick="copyTextToClipboard('<script src=\'https://cdn.example.com/your-script.js\'></script>')">JS Script for chatbot </div>
+    </div>
+    <div class="placeholder-group">
+        <div class="placeholder" onclick="copyTextToClipboard('https://api.example.com/your-css-link.css')">CSS Link for images</div>
+        <div class="placeholder" onclick="copyTextToClipboard('<script src=\'https://cdn.example.com/your-script.js\'></script>')">JS Script images</div>
+    </div>
+    <div class="placeholder-group">
+        <div class="placeholder" onclick="copyTextToClipboard('https://api.example.com/your-css-link.css')">CSS Link for accounts connectivity</div>
+        <div class="placeholder" onclick="copyTextToClipboard('<script src=\'https://cdn.example.com/your-script.js\'></script>')">JS Script for accounts connectivity </div>
+    </div>
+    <div class="placeholder-group">
+        <div class="placeholder" onclick="copyTextToClipboard('https://api.example.com/your-css-link.css')">CSS Link for bootstrap</div>
+        <div class="placeholder" onclick="copyTextToClipboard('<script src=\'https://cdn.example.com/your-script.js\'></script>')">JS Script for bootstrap</div>
+    </div>
+    <div class="placeholder-group">
+        <div class="placeholder" onclick="copyTextToClipboard('https://api.example.com/your-css-link.css')">CSS CDN Link for tailwindcss</div>
+        <div class="placeholder" onclick="copyTextToClipboard('<script src=\'https://cdn.example.com/your-script.js\'></script>')">JS CDN Script for tailwindcss</div>
+    </div>
+    <div class="placeholder-group">
+        <div class="placeholder" onclick="copyTextToClipboard('https://api.example.com/your-css-link.css')">CSS CDN Link for Zapier automation </div>
+        <div class="placeholder" onclick="copyTextToClipboard('<script src=\'https://cdn.example.com/your-script.js\'></script>')">JS CDN Script for Zapier automation</div>
+    </div>
+    <img src="./images/13.jpeg" alt="Image 1" width="300" height="300">
+    <img src="./images/14.jpeg" alt="Image 1" width="300" height="300">
+    <img src="./images/15.jpeg" alt="Image 1" width="300" height="300">
+    <img src="./images/11.jpeg" alt="Image 1" width="390" height="300">
+    <script src="https://cdn.example.com/script1.js"></script>
+    <script src="https://cdn.example.com/script2.js"></script>
+</body>
+</html>

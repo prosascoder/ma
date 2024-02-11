@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        
+        .center {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            color: #fff;
+        }
+        
+        .button-container {
+            margin-top: 20px;
+        }
+        
+        .button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: rgb(152, 152, 25);
+            color: #fff;
+            border: 3px black;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            transition: border background-color 0.2s ease;
+        }
+        
+        .button:hover {
+            background-color: transparent;
+        }
+                .dropdown-menu {
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background-color: #131312;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                  border-radius: 8px;
+                  padding: 10px;
+                  margin-left: 40px;
+                  margin-bottom: 40px;
+                }
+              
+                .dropdown-menu button {
+                  color: white;
+                  padding: 8px 20px;
+                  display: block;
+                  text-decoration: none;
+                  font-size: 12px;
+                  background-color: transparent;
+                  border: none;
+                  width: 100%;
+                  text-align: left;
+                  /* Add padding between the buttons */
+                  margin-bottom: 10px;
+                  cursor: pointer;
+                  
+                }
+              
+                /* Apply the hover effect */
+                .dropdown-menu button:hover {
+                  background-color: greenyellow;
+                  color: black;
+                }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="backgroundVideo" loop muted autoplay class="video">
+          <source id="videoSource" src="./cruise_ship_-_3713 (540p).mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="center">
+          <h1>Welcome to  Maritime Analysis</h1>
+          <div class="button-container">
+            <button class="button" id="theme-button">THEME</button>
+            <div class="dropdown-menu" id="theme-menu">
+              <button class="option" onclick="changeBackgroundVideo(this)" data-video-link="./hong_kong_-_2849 (540p).mp4">Theme 1</button>
+              <button class="option" onclick="changeBackgroundVideo(this)" data-video-link="./container_terminal_-_23008 (1080p).mp4">Theme 2</button>
+              <button class="option" onclick="changeBackgroundVideo(this)" data-video-link="./shipping_-_8809 (1080p).mp4">Theme 3</button>
+              <button class="option" onclick="changeBackgroundVideo(this)" data-video-link="./container_terminal_-_24255 (1080p).mp4">Theme 4</button>
+            </div>
+            <script>
+              document.getElementById("theme-button").addEventListener("click", function() {
+                var dropdownMenu = document.getElementById("theme-menu");
+                if (dropdownMenu.style.display === "none") {
+                  dropdownMenu.style.display = "block";
+                } else {
+                  dropdownMenu.style.display = "none";
+                }
+              });
+      
+              function changeBackgroundVideo(option) {
+                var videoSource = document.getElementById('videoSource');
+                var backgroundVideo = document.getElementById('backgroundVideo');
+                var videoLink = option.dataset.videoLink; // Extract the video link from the data attribute.
+      
+                videoSource.src = videoLink;
+                backgroundVideo.load();
+                backgroundVideo.play();
+      
+                // Close the dropdown menu after an option is selected (optional).
+                var dropdownMenu = document.getElementById("theme-menu");
+                dropdownMenu.style.display = "none";
+              }
+            </script>
+            <button class="button" id="next-button">NEXT</button>
+            <script>
+              // JavaScript to handle the button click event
+              const nextButton = document.getElementById("next-button");
+      
+              nextButton.addEventListener("click", () => {
+                // Replace "path/to/your/other/file.html" with the actual path to your desired file or URL
+                window.location.href = "interface.html";
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+      
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA ROUTES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color:#a19a9a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #444;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 0 15px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            flex: 0 0 calc(40% - 40px);
+            margin: 20px;
+            padding: 20px;
+            background-color: #23bd96;
+            border: 5px solid #e9e4e4;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            border-radius: 25px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SEA RATES</h1>
+    </header>
+    <nav>
+        <a href="./freighttools.html">Tools</a>
+        <a href="./freightservices.html">Services</a>
+        <a href="./freightreference.html">Reference</a>
+        <a href="./freightcompany.html">Company</a>
+        <a href="./apiservices.html"> API Integration</a>
+    </nav>
+    <div class="card-container">
+        <section id="world sea ports" class="card">
+            <h2>world sea ports</h2>
+            <p>This section is about the world sea ports.</p>
+        </section>
+        <section id="FIND PORTS BY SHIPPING LINE" class="card">
+            <h2>FIND PORTS BY SHIPPING LINE</h2>
+            <p>This section is about the services our company offers.</p>
+        </section>
+        <section id="UNIT CONVERTER" class="card">
+            <h2>UNIT CONVERTER</h2>
+            <p>This section is about unit converterof rates & materials or resources.</p>
+        </section>
+        <section id="DEMURRAGE & STORAGE" class="card">
+            <h2>DEMURRAGE & STORAGE</h2>
+            <p>This section is about demurage and storage options.</p>
+        </section>
+        <section id="SHIPPING LINES DIRECTORY " class="card">
+            <h2>SHIPPING LINES DIRECTORY</h2>
+            <p>This section is about directory.</p>
+        </section>
+    </div>
+    <video id="background-video" autoplay loop muted>
+        <source src="./cruise_ship_-_3713 (540p).mp4" type="video/mp4">
+        <!-- Add additional video sources for different formats if needed -->
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARITIME ANALYSIS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="body.css">
+</head>
+ <a>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">MARITIME ANALYSIS</span>
+            </a>
+              <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <button class="nav-button mr-5 hover:text-gray-900" onmouseover="this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.8)'; this.style.border='2px solid black';"
+                  onmouseout="this.style.boxShadow='none'; this.style.border='2px solid transparent';"onclick="window.location.href = 'aboutus.html';">
+                  ABOUT
+                </button>
+                <div class="nav-button-container">
+                    <button class="nav-button mr-5 hover:text-gray-900" 
+                            onmouseover="this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.8)'; this.style.border='2px solid black';"
+                            onmouseout="this.style.boxShadow='none'; this.style.border='2px solid transparent';"
+                            onclick="toggleDropdown2()">
+                        DOCUMENTATION
+                    </button>
+            
+                    <!-- Dropdown menu -->
+                    <div class="dropdown-menu" id="documentation-menu"style="margin-top:5px">
+                        <button class="option" onclick="location.href='PS1.pdf'">PDF</button>
+                        <button class="option" onclick="location.href='PS1.pptx'">PPT</button>
+                        <button class="option" onclick="location.href='RESEARCH.pdf'"> RESEARCH</button>
+                    </div>
+                </div>
+                <div class="nav-button-container">
+                    <button class="nav-button mr-5 hover:text-gray-900" 
+                            onmouseover="this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.8)'; this.style.border='2px solid black';"
+                            onmouseout="this.style.boxShadow='none'; this.style.border='2px solid transparent';"
+                            onclick="toggleDropdown3()">
+                        LICENSE
+                    </button>
+                
+                    <!-- Dropdown menu -->
+                    <div class="dropdown-menu" id="license-menu"style="margin-top:5px">
+                        <button class="option" onclick="location.href='Ansh Sinha Reporting form.pdf'">LICENSE</button>
+                        <button class="option" onclick="location.href='path_to_your_license_file.docx'">REVIEW </button>                        
+                    </div>
+                </div>                
+              </nav>
+              <style>
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                  }
+                  
+                  .dropdown-menu {
+                    display: none; /* Hide the dropdown menu by default */
+                    position: absolute;
+                    margin-top: 5px;
+                  }
+              </style>
+              <div class="dropdown">
+                <button onclick="toggleDropdown1()" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-green hover:text-black hover:scale-110 rounded-lg text-base mt-4 md:mt-0 login-button" style="transition: background-color 0.3s, box-shadow 0.2s, transform 0.3s; border-width: 2px;">
+                  ACCOUNT
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"></svg>
+                </button>
+                <div id="dropdown-menu" class="dropdown-menu" style="margin-top:5px">
+                  <button id="login-btn">Login</button>
+                  <button id="login-btn1">Register</button>
+                </div>
+              </div>
+             
+              
+              
+        </div>
+        <button style="padding: 10px 10px; font-size: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); transition: box-shadow 0.3s, transform 0.3s;" class="absolute inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none rounded text-base maribot-button"onmouseover="this.style.transform = 'scale(1.1)';"onmouseout="this.style.transform = 'scale(1)';" onclick="toggleChatbot()">
+        <img src="./Screenshot 2023-07-20 145952.png" alt="Replace this with an image" style="width: 100px; height: 100px; margin-top: 5px">
+        </button>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"></svg>
+    </header>
+    <header class="second-header">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+            <button class="oval-button" id="homePageButton">HOME PAGE</button>
+            <button class="oval-button" id="dashboardButton"onclick="toggleDashboards()">DASHBOARD</button>
+            
+            <style>
+                .dropdown {
+                  position: relative;
+                  display: inline-block;
+                }
+                .dropdown-menu {
+                  display: none;
+                  position: absolute;
+                  margin-top: 3px;
+                }
+                </style>
+              <div class="dropdown1" style="position: relative; display: inline-block;">
+                <button class="oval-button" id="datadriveButton" onclick="toggleDropdown()">DATA DRIVE<span style="transform: rotate(90deg); display: inline-block; margin-left: 5px;"></span></button>
+                <div class="dropdown-menu" id="dropdownMenu"style="margin-top:3px">
+                  <button id="MariButton">MARITIME DATA</button>
+                  <button id="portsButton">PORTS</button>
+                  <button id="AreasButton">AREAS</button>
+                  <button id="FreightButton">FREIGHT RATE</button>
+                  
+                </div>
+              </div>
+              <script src="dropdown.js"></script>
+              
+        </div>
+    </header>
+    <div class="slideshow-container" style="padding: 25px; width: 840px ">
+        <img class="mySlides" src="./images/16.png" style="width: 100%; height: 430px; object-fit: cover;;border: 3px solid black"  /> 
+        <img class="mySlides" src="./images/18.png"  style="width: 100%; height: 430px; object-fit: cover;;border: 3px solid black" /> 
+        <img class="mySlides" src="./images/17.png"  style="width: 100%; height: 430px; object-fit: cover;;border: 3px solid black" /> 
+        <img class="mySlides" src="./images/13.jpeg"  style="width: 100%; height: 430px; object-fit: cover;;border: 3px solid black" />
+        <img class="mySlides" src="./images/8.png"  style="width: 100%; height: 430px; object-fit: cover;;border: 3px solid black" /> 
+        <img class="mySlides" src="./images/15.jpeg"  style="width: 100%; height: 430px; object-fit: cover;;border: 3px solid black" />   
+        <img class="mySlides" src="./images/4.png"  style="width: 100%; height: 430px; object-fit: cover;;border: 3px solid black" />    
+    </div>
+    <div class="slideshow-container" style="padding: 25px, 25px; width: 840px ">
+        <img class="mySlides1" src="./images/5.jpg" style="width: 450px; height: 430px; object-fit: cover; margin-left:850px; margin-top: -456px;border:3px solid black" /> 
+        <img class="mySlides1" src="./images/6.png" style="width: 450px; height: 430px; object-fit: cover; margin-left:850px; margin-top: -456px;border:3px solid black" /> 
+        <img class="mySlides1" src="./images/8.png" style="width: 450px; height: 430px; object-fit: cover; margin-left:850px; margin-top: -456px;border:3px solid black" /> 
+        <img class="mySlides1" src="./images/20.png" style="width: 450px; height: 430px; object-fit: cover; margin-left:850px; margin-top: -456px;border:3px solid black" /> 
+        <img class="mySlides1" src="./images/19.png" style="width: 450px; height: 430px; object-fit: cover; margin-left:850px; margin-top: -456px;border:3px solid black" /> 
+        <img class="mySlides1" src="./images/21.png" style="width: 450px; height: 430px; object-fit: cover; margin-left:850px; margin-top: -456px;border:3px solid black" /> 
+        <img class="mySlides1" src="./images/3.png" style="width: 450px; height: 430px; object-fit: cover; margin-left:850px; margin-top: -456px;border:3px solid black" /> 
+    </div>
+    <style>
+        .mySlides,
+        .mySlides1 {
+            display: none;
+        }
+    </style>
+    <script src="homepage.js"></script>
+
+    <a href="./gps.html">
+        <div class="dashboard dashboard-1" style="border: 2px solid black; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);">    
+            <H1 style="margin-top:60px ; margin-left:27px">GPS MARINE ROUTE</H1> 
+        </div>
+      </a>
+      
+    <a href="./freight.html" >
+    <div class="dashboard dashboard-2" style="border: 2px solid black; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);"> 
+        <H1 style="margin-top:60px ; margin-left:27px">SEA RATES</H1> 
+    </div>  
+    </a>
+
+    <a href="http://www.shiptraffic.net/2001/05/sea-distances-calculator.html" >
+    <div class="dashboard dashboard-3" style="border: 2px solid black; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);">
+        <H1 style="margin-top:60px ; margin-left:55px;">MARINE SEA ROUTE</H1> 
+    </div> 
+    </a>
+
+    <a href="upload.html" >
+    <div class="dashboard dashboard-4" style="border: 2px solid black; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);">
+        <H1 style="margin-top:60px ; margin-left:27px">UPLOAD & EXTENSIONS</H1> 
+    </div>
+    </a>
+
+    <a href="./mar_esms_an2.xlsx" >
+    <div class="dashboard dashboard-5" style="border: 2px solid black; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);"> 
+        <H1 style="margin-top:60px ; margin-left:27px">COMPANY DATA PROFILE</H1> 
+    </div>
+    </a>
+
+    <a href="./apiservices.html" >
+    <div class="dashboard dashboard-6" style="border: 2px solid black; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);">
+        <H1 style="margin-top:60px ; margin-left:40px">API SERVICES</H1> 
+   </div>
+   </a> 
+    <script src="dashboard.js"></script>
+    <div class="chatbot-container" id="chat-container" style="visibility: hidden;">
+        <div class="chat-header">
+            MARITIME SPECIFIC
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="bot-message">Hello! How can I assist you today?</div>
+            <div class="bot-message">You can refer Maribot AI if you don't get the desired result!!</div>
+
+        </div>
+        <button style="background-color: #9066e6; color: white; border: 5px white;border-radius:10px; padding: 5px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; margin-bottom: 10px;margin-left:140px;margin-bottom:-1px; cursor: pointer; width:100px" onclick="redirectToNewPage()">MARIBOT AI</button>
+        <div class="chat-input">
+            <input type="text" class="input-field" id="user-input" placeholder="Type your message...">
+            <button class="send-button" onclick="sendMessage1()">Send</button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+    <video class="background-video" autoplay loop muted>
+        <source src="./container_terminal_-_23008 (1080p).mp4" type="video/mp4">
+        <!-- Add additional video sources for different formats if needed -->
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
+
